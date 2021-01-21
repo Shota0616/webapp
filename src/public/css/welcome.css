@@ -1,0 +1,488 @@
+html{
+
+}
+
+input,
+textarea,
+select {
+    outline: none;
+}
+
+*:focus {
+outline: none;
+}
+
+button:focus {
+	outline:none;
+}
+
+a{
+  text-decoration: none;
+  color: #333;
+}
+
+a:hover{
+  text-decoration: none;
+  color: #333;
+}
+
+button:hover{
+  opacity: 0.6;
+}
+
+/*////////////////////////////////////////
+////////          login          /////////
+////////////////////////////////////////*/
+.login_btn{
+  color: white;
+  text-decoration: none;
+}
+.login_btn:hover{
+    text-decoration: none;
+}
+
+/*////////////////////////////////////////
+////////          header         /////////
+////////////////////////////////////////*/
+
+.nav-link{
+  display: inline-block;
+}
+
+
+/*////////////////////////////////////////
+////////         complete        /////////
+////////////////////////////////////////*/
+
+.complete{
+  width: 200px;
+  max-width: 100%;
+  margin: 100px auto 0 auto;
+  text-align: center;
+
+}
+
+.complete a{
+  text-decoration: none;
+  display: block;
+  color: #1A0DAB;
+}
+
+.complete a:hover{
+  text-decoration: underline;
+  color: #98d2fe;
+}
+
+
+/*////////////////////////////////////////
+////////          search         /////////
+////////////////////////////////////////*/
+
+.content{
+  margin: 20px auto;
+}
+
+.top{
+  max-width: 92%;
+  width: 980px;
+  height: 50px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search{
+  width: 900px;
+  max-width: 100%;
+  margin: 0 0 0 auto;
+}
+
+.search form{
+  text-align: center;
+}
+
+.search_keyword{
+  width: 450px;
+  height: 30px;
+  border-radius: 15px;
+  border: 1px solid #bbb;
+  padding-left: 15px;
+}
+
+.search_prefecture,.search_cat{
+  width: 100px;
+  border-radius: 15px;
+  border: 1px solid #bbb;
+  padding-left: 13px;
+  height: 30px;
+}
+
+
+.search button{
+  border: 1px solid #bbb;
+  margin: 0 0 0 10px;
+  padding: 2px 10px;
+  border-radius: 14px;
+}
+
+.addbtn{
+  margin: 0 auto 0 0;
+}
+
+.addbtn button{
+  width: 130px;
+  border: 1px solid #bbb;
+  border-radius: 14px;
+  padding: 3px 0;
+}
+
+.addbtn button a{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.main{
+  width: 92%;
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+}
+
+
+/*////////////////////////////////////////
+////////      main-content       /////////
+////////////////////////////////////////*/
+
+.main-content{
+  margin: 0 0 0 35px;
+  width: 695px;
+  max-width: 100%;
+}
+
+.item{
+  display: flex;
+  width: 100%;
+  height: 200px;
+  border-top: 1px solid #bbb;
+}
+
+.item:hover .place_name{
+  color: #FFAB00;
+  text-decoration: underline;
+}
+
+.place_name{
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(0,102,204);
+}
+
+
+/*////////////////////////////////////////
+////////      place-dedails      /////////
+////////////////////////////////////////*/
+.place_edit{
+  width: 700px;
+  max-width: 90%;
+  margin: 0 auto 3px auto;
+  text-align: right;
+}
+
+a.place_edit_btn{
+  color: #fff;
+  background-color: #eb6100;
+  padding: 2px 10px;
+  border-radius: 8px;
+}
+
+a.place_edit_btn:hover{
+  color: #fff;
+  background: #f56500;
+}
+
+p.information_p{
+  margin: 0 auto;
+  font-size: 18px;
+  font-weight: bold;
+  width: 700px;
+}
+
+table.information{
+  width: 700px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.information_row{
+  border-top: 1px solid #bbb;
+}
+
+.information_row:last-child{
+  border-bottom: 1px solid #bbb;
+}
+
+.information_row td{
+  padding: 15px 0 15px 15px;
+}
+
+.information_row td:first-child{
+  background-color: #fff0e0;
+  width: 150px;
+  padding: 15px 0 15px 15px;
+}
+
+.evaluation{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+.evaluation input[type='radio']{
+  display: none;
+}
+.evaluation label{
+  position: relative;
+  padding: 0 5px 0;
+  color: gray;
+  cursor: pointer;
+  font-size: 25px;
+}
+.evaluation label .text{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  text-align: center;
+  font-size: 12px;
+  color: gray;
+}
+.evaluation label:hover,
+.evaluation label:hover ~ label,
+.evaluation input[type='radio']:checked ~ label,
+.first_eva{
+  color: #ffcc00;
+}
+
+.evaluation1 span,.evaluation2 span,.evaluation3 span,.evaluation4 span,.evaluation5 span{
+  color: #bbb;
+}
+
+.evaluation1 span:nth-child(1),
+.evaluation2 span:nth-child(-n+2),
+.evaluation3 span:nth-child(-n+3),
+.evaluation4 span:nth-child(-n+4),
+.evaluation5 span:nth-child(-n+5){
+  color: #ffcc00;
+}
+
+.review_post{
+  display: none;
+  position: fixed;
+  border-radius: 10px;
+  width: 700px;
+  height: 600px;
+  max-width: 90%;
+  padding: 40px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #def;
+}
+
+.review_post_edit{
+  display: block;
+}
+
+.review_place_name{
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.form_group{
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.review_evaluation,.review_title,.review_comment{
+  font-weight: bold;
+  height: 40px;
+  line-height: 40px;
+  width: 100px;
+  text-align: left;
+}
+
+.form_group input,.form_group textarea{
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.review_post_btn{
+  text-align: center;
+}
+
+.review_post_btn_inner{
+  width: 180px;
+}
+
+.reviews{
+  width: 90%;
+  max-width: 980px;
+  margin: 50px auto;
+}
+
+.review_header{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 50px auto;
+}
+
+.review_header h3{
+  line-height: 40px;
+  margin: 0;
+}
+
+.review_header a{
+  font-weight: bold;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 10px;
+  text-align: center;
+  background: #668ad8;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #627295;
+}
+
+.review_header a:hover{
+  opacity: 0.5;
+}
+
+.review_all{
+  text-align: center;
+}
+
+.review_item{
+  display: inline-block;
+  border-bottom: 1px solid #bbb;
+  padding: 0 20px 20px 20px;
+  margin: 0 auto 20px auto;
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+}
+
+.review_user_name{
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.review_user_name span{
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.review_item_title{
+  font-size: 17px;
+  font-weight: bold;
+  margin: 2px 0;
+}
+
+/*////////////////////////////////////////
+////////           home          /////////
+////////////////////////////////////////*/
+
+.home-container{
+  margin: 50px auto;
+}
+
+.user_review_all{
+  text-align: center;
+}
+
+.user_review_item{
+  display: inline-block;
+  border-bottom: 1px solid #bbb;
+  padding: 0 20px 20px 20px;
+  margin: 0 auto 20px auto;
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+}
+
+.user_review_edit{
+  margin-top: 10px;
+}
+
+.user_review_item_place:hover{
+  text-decoration: underline;
+}
+
+.user_review_item_title{
+  font-size: 17px;
+  font-weight: bold;
+  margin: 2px 0;
+}
+
+.btn--orange,
+a.btn--orange,
+button.btn--orange{
+  color: #fff;
+  background-color: #eb6100;
+}
+.btn--orange:hover,
+a.btn--orange:hover,
+button.btn--orange:hover{
+  color: #fff;
+  background: #f56500;
+}
+
+
+
+button.btn--orange{
+  border: none;
+}
+
+.delete_review{
+  text-align: center;
+  margin-top: 50px;
+}
+
+input.review_delete_btn{
+  color: #fff;
+  background-color: #eb6100;
+  border: none;
+  border-radius: 3px;
+}
+
+input.review_delete_btn:hover{
+  color: #fff;
+  background: #f56500;
+}
+
+.delete_review_item{
+  display: inline-block;
+  border-top: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+  padding: 20px;
+  margin: 0 auto 20px auto;
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+}
