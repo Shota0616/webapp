@@ -7,39 +7,37 @@ use Illuminate\Support\Facades\DB;
 
 use App\Review;
 use App\Place;
-use Auth;
 
 class ReviewController extends Controller
 {
 
   public function review_post(Request $request){
+
     // バリデーション
     $request->validate([
-        'places_id' => [
-            'required',
-            'exists:places,id',
-            function($attribute, $value, $fail) use($request) {
+      // すでにレビュー投稿してるかチェック
 
-                // すでにレビュー投稿してるかチェック
-                $exists = Review::where('users_id', $request->users_id)
-                    ->where('places_id', $request->places_id)
-                    ->exists();
+      'places_id' => [
+           'required',
+           'exists:places,id',
+           function($attribute, $value, $fail) use($request) {
 
-                    if ($exists) {
-                      $exists = Review::where('users_id','1')
-                          ->exists();
-                          if ($exists) {
-                            $exists = NULL;
-                          }
-                    }
+               $exists = Review::where('users_id', '=', $request->users_id)
+                   ->where('places_id','=', $request->places_id)
+                   ->exists();
 
-                if($exists) {
-                  $fail('すでにレビューは投稿済みです。');
-                  return;
-                }
+               if($request->users_id == 1){
+                 $exists = NULL;
+               }
 
-            }
-        ],
+               if($exists) {
+                 $fail('すでにレビューは投稿済みです。');
+                 return;
+               }
+           }
+       ],
+
+
         'review_evaluation' => 'required',
         'review_title' => 'required',
         'review_comment' => 'required',

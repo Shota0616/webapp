@@ -21,7 +21,7 @@
       <p>登録を完了しました。</p>
       <a href="{{ route('top') }}">HOMEへ戻る</a>
       @if( Auth::check() )
-      <a href="{{ route('home') }}">マイページへ戻る</a>
+      <a href="http://127.0.0.1:8080/home/?id={{ Auth::id() }}">マイページへ戻る</a>
       @endif
     </div>
   </body>

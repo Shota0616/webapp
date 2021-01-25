@@ -40,7 +40,10 @@
             {{$place->place_name}}
           </div>
           <div class="place_address">
-            {{$place->place_prefecture}}/{{$place->place_cat}}
+            {{$place->place_prefecture}}
+          </div>
+          <div class="place_cat">
+            {{$place->place_cat}}
           </div>
           <div class="place_budget">
             予算：{{$place->place_budget}}

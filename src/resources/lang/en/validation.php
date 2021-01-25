@@ -84,10 +84,10 @@ return [
     ],
     'string'               => ':attributeには文字列を指定してください。',
     'timezone'             => ':attributeには正しい形式のタイムゾーンを指定してください。',
-    'unique'               => 'その:attributeはすでに使われています。',
+    'unique'               => ':attributeはすでに登録済みです。',
     'uploaded'             => ':attributeのアップロードに失敗しました。',
     'url'                  => ':attributeには正しい形式のURLを指定してください。',
- 
+
     'custom' => [
         'attribute-name' => [
             'rule-name' => 'custom-message',
@@ -105,6 +105,12 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+      'place_name' => '名称',
+      'place_tel' => '電話番号',
+      'review_evaluation' => '評価',
+      'review_title' => 'タイトル',
+      'review_comment' => '本文',
+    ],
 
 ];

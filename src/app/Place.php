@@ -13,9 +13,9 @@ class Place extends Model
     return $this->hasMany('App\Review');
   }
 
-  public static $rules = array(
-    'place_name' => 'unique:places,place_name',
+  public static $rules = [
+    'place_name' => 'required|unique:places,place_name',
     'place_tel' => 'unique:places,place_tel',
-  );
+  ];
 
 }

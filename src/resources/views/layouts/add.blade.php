@@ -26,9 +26,15 @@
                     <div class="card-header">{{ __('地点登録') }}</div>
 
                     <div class="card-body">
+                      @if(count($errors) > 0)
+                      　<ul class="errmsg">
+                        @foreach($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                        </ul>
+                      @endif
                         <form method="POST" action="{{ route('place_create') }}">
                           @csrf
-
                           <div class="form-group row">
                             <label for="place_name" class="col-md-4 col-form-label text-md-right">{{ __('名称') }}</label>
                             <div class="col-md-6">

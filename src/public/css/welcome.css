@@ -183,6 +183,10 @@ button:hover{
 /*////////////////////////////////////////
 ////////      place-dedails      /////////
 ////////////////////////////////////////*/
+.errmsg li{
+  color: #faa;
+}
+
 .place_edit{
   width: 700px;
   max-width: 90%;

@@ -21,6 +21,12 @@ class RegisterController extends Controller
     | provide this functionality without requiring any additional code.
     |
     */
+    public function redirectPath()
+    {
+      $id = Auth::id();
+      $url = 'http://127.0.0.1:8080/home?id='.$id;
+      return $url;
+    }
 
     use RegistersUsers;
 

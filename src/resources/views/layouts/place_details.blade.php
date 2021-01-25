@@ -19,6 +19,14 @@
   @include('layouts.header')
   @include('layouts.search')
 
+  @if(count($errors) > 0)
+  　<ul class="errmsg">
+    @foreach($errors->all() as $error)
+    <li>{{ $error }}</li>
+    @endforeach
+    </ul>
+  @endif
+
   <div class="place_details">
     @foreach ($place ?? '' as $place)
     <table class="information">
