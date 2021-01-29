@@ -19,14 +19,13 @@ class HomeController extends Controller
   }
 
   public function user_review(Request $request){
+    $id = $request->id;
     $query = Review::query();
-    $review = $query->where('users_id','=',"$request->id")->get();
-    $query2 = User::query();
-    $user = $query2->where('id','=',"$request->id")->get();
+    $reviews = $query->where('users_id','=',"$request->id")->paginate(5);
 
     return view('layouts.home',[
-      'review' => $review,
-      'user' => $user
+      'id' => $id,
+      'reviews' => $reviews,
     ]);
   }
 

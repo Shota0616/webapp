@@ -29,19 +29,19 @@
                             {{ session('status') }}
                         </div>
                     @endif
-@foreach ($user ?? '' as $user)
-                    {{ __('こんにちは！') }}{{$user->name}}さん！
+
+                    {{ __('こんにちは！') }}！
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-@endforeach
 
 
 
-@foreach ($review ?? '' as $review)
+
+@foreach ($reviews as $review)
 
 <div class="user_review_all">
 <div class="user_review_item">
@@ -75,3 +75,4 @@
 </div>
 </div>
 @endforeach
+{{ $reviews->appends(request()->input())->links('vendor.pagination.pagination_view') }}

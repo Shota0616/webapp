@@ -490,3 +490,12 @@ input.review_delete_btn:hover{
   max-width: 600px;
   text-align: left;
 }
+
+/*////////////////////////////////////////
+////////        pagination       /////////
+////////////////////////////////////////*/
+
+.pagination{
+  justify-content: center;
+  align-items: center;
+}

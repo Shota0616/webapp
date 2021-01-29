@@ -53,6 +53,7 @@
       @endforeach
     </div>
   </div>
+  {{ $places->links('vendor.pagination.pagination_view') }}
 </body>
 
 </html>

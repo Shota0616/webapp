@@ -23,8 +23,7 @@ class RegisterController extends Controller
     */
     public function redirectPath()
     {
-      $id = Auth::id();
-      $url = 'http://127.0.0.1:8080/home?id='.$id;
+      $url = 'http://127.0.0.1:8080/complete';
       return $url;
     }
 
