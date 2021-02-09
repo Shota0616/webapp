@@ -34,7 +34,7 @@
 
     <div class="main-content">
       @foreach ($places ?? '' as $place)
-      <a href="http://127.0.0.1:8080/place_details/?id={{$place->id}}" class="item" >
+      <a href="http://dosomething.tokyo/place_details/?id={{$place->id}}" class="item" >
         <div class="place_data">
           <div class="place_name">
             {{$place->place_name}}

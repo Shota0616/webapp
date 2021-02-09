@@ -32,7 +32,7 @@
     <table class="information">
       <p class="information_p">基本情報</p>
       <div class="place_edit">
-        <a href="http://127.0.0.1:8080/place_edit/?id={{$place->id}}" class="place_edit_btn">編集</a>
+        <a href="http://dosomething.tokyo/place_edit/?id={{$place->id}}" class="place_edit_btn">編集</a>
       </div>
       <tr class="information_row">
         <td>名称</td>
