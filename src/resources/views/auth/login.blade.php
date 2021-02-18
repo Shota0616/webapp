@@ -1,6 +1,6 @@
 <!-- Styles -->
-<link href="{{ asset('css/app.css') }}" rel="stylesheet">
-<link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
+<link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
+<link rel="stylesheet" href="{{ secure_asset('css/welcome.css') }}">
 
 @extends('layouts.app')
 
