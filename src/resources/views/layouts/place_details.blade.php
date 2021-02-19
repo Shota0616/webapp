@@ -11,8 +11,8 @@
 <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
 <!-- Styles -->
-<link href="css/app.css" rel="stylesheet">
-<link rel="stylesheet" href="css/welcome.css">
+<link href="https://asonavi.tokyo/css/app.css" rel="stylesheet">
+<link rel="stylesheet" href="https://asonavi.tokyo/css/welcome.css">
 
 <body>
 
