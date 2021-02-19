@@ -22,8 +22,8 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="https://asonavi.tokyo/css/app.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://asonavi.tokyo/css/welcome.css">
+    <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ secure_asset('css/welcome.css') }}">
 </head>
 <body>
 
