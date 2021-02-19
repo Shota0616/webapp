@@ -31,7 +31,6 @@
   @include('layouts.search')
 
   <div class="main">
-
     <div class="main-content">
       @foreach ($places ?? '' as $place)
       <a href="https://asonavi.tokyo/place_details/?id={{$place->id}}" class="item" >
