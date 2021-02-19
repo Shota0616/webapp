@@ -11,8 +11,8 @@
 <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
 <!-- Styles -->
-<link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
-<link rel="stylesheet" href="{{ secure_asset('css/welcome.css') }}">
+<link href="css/app.css" rel="stylesheet">
+<link rel="stylesheet" href="css/welcome.css">
 
 <body>
 
@@ -32,7 +32,7 @@
     <table class="information">
       <p class="information_p">基本情報</p>
       <div class="place_edit">
-        <a href="http://dosomething.tokyo/place_edit/?id={{$place->id}}" class="place_edit_btn">編集</a>
+        <a href="https://asonavi.tokyo/place_edit/?id={{$place->id}}" class="place_edit_btn">編集</a>
       </div>
       <tr class="information_row">
         <td>名称</td>

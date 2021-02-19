@@ -11,8 +11,8 @@
 <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
 <!-- Styles -->
-<link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
-<link rel="stylesheet" href="{{ secure_asset('css/welcome.css') }}">
+<link href="css/app.css" rel="stylesheet">
+<link rel="stylesheet" href="css/welcome.css">
 
 @include('layouts.header')
 
