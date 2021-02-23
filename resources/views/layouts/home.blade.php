@@ -1,19 +1,7 @@
-<!-- Scripts -->
-<script
-  src="https://code.jquery.com/jquery-3.5.1.js"
-  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-  crossorigin="anonymous"></script>
-<script src="js/app.js" defer></script>
-<script src="js/custom.js"></script>
-
-<!-- Fonts -->
-<link rel="dns-prefetch" href="//fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
-<!-- Styles -->
-<link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
-<link rel="stylesheet" href="{{ secure_asset('css/welcome.css') }}">
-
+<!doctype html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+  @include('layouts.head')
+<body>
 @include('layouts.header')
 
 
@@ -45,7 +33,7 @@
 
 <div class="user_review_all">
 <div class="user_review_item">
-  <a class="user_review_item_place" href="https://asonavi.tokyo/place_details/?id={{$review->places_id}}">
+  <a class="user_review_item_place" href="place_details/?id={{$review->places_id}}">
     {{$review->review_place_name}}
   </a>
   <div class="evaluation{{$review->review_evaluation}}">
@@ -65,10 +53,10 @@
     {{$review->review_comment}}
   </div>
   <div class="user_review_edit">
-    <a class="btn btn--orange" href="https://asonavi.tokyo/review_edit/?id={{$review->id}}">
+    <a class="btn btn--orange" href="../review_edit/?id={{$review->id}}">
       編集
     </a>
-    <a class="btn btn--orange" href="https://asonavi.tokyo/review_delete/?id={{$review->id}}">
+    <a class="btn btn--orange" href="../review_delete/?id={{$review->id}}">
       削除
     </a>
   </div>
@@ -76,3 +64,7 @@
 </div>
 @endforeach
 {{ $reviews->appends(request()->input())->links('vendor.pagination.pagination_view') }}
+
+</body>
+@include('layouts.footer')
+</html>

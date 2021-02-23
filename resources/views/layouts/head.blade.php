@@ -22,6 +22,6 @@
 
     <!-- Styles -->
     <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ secure_asset('css/welcome.css') }}">
+    <link href="{{ secure_asset('css/welcome.css') }}" rel="stylesheet">
 </head>
-@endsection
+@show
