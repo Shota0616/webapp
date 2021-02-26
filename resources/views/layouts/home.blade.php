@@ -30,7 +30,6 @@
 
 
 @foreach ($reviews as $review)
-
 <div class="user_review_all">
 <div class="user_review_item">
   <a class="user_review_item_place" href="place_details/?id={{$review->places_id}}">
@@ -63,6 +62,7 @@
 </div>
 </div>
 @endforeach
+
 {{ $reviews->appends(request()->input())->links('vendor.pagination.pagination_view') }}
 
 </body>

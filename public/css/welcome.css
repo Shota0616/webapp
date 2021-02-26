@@ -2,6 +2,16 @@ html,body{
   height: 100%;
 }
 
+html{
+  min-height: 100%;
+  position: relative;
+}
+
+body{
+  margin-bottom: 200px;
+}
+
+
 input,
 textarea,
 select {
@@ -532,17 +542,27 @@ input.review_delete_btn:hover{
 ////////          footer         /////////
 ////////////////////////////////////////*/
 footer{
-  background-color: #ffffff;
-  height: 200px;
-  bottom: 0;
-  box-shadow: 0 0.125rem 5.25rem rgba(0, 0, 0, 0.075) !important;
-}
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    background-color: #ffffff;
+    height: 200px;
+    bottom: 0;
+    box-shadow: 0 0.125rem 5.25rem rgba(0, 0, 0, 0.075) !important;
+  }
 
 footer p{
   color: #515152;
   text-align: center;
   line-height: 200px;
   margin-bottom: 0;
+}
+
+/*////////////////////////////////////////
+////////      pagination         /////////
+////////////////////////////////////////*/
+.pagination{
+  margin-bottom: 250px;
 }
 
 

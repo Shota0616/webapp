@@ -65,6 +65,7 @@ class PlaceController extends Controller
 
   public function search(Request $request){
     $query = Place::query();
+    $places = Place::paginate(5);
     $keyword = $request->keyword;
     $prefecture = $request->prefecture;
     $category = $request->category;

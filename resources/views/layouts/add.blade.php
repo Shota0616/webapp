@@ -4,7 +4,7 @@
 <body>
 @include('layouts.header')
 
-    <script src="{{ secure_asset('js/ajaxzip3.js') }}"></script>
+    <script src="{{ asset('js/ajaxzip3.js') }}"></script>
 
     <div class="container">
         <div class="row justify-content-center">
