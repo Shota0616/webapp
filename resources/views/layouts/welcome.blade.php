@@ -9,7 +9,7 @@
   <div class="main">
     <div class="main-content">
       @foreach ($places ?? '' as $place)
-      <a href="place_details/?id={{$place->id}}" class="item" >
+      <a href="place_details?id={{$place->id}}" class="item" >
         <div class="place_data">
           <div class="place_name">
             {{$place->place_name}}

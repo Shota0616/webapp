@@ -19,7 +19,7 @@
     <table class="information">
       <p class="information_p">基本情報</p>
       <div class="place_edit">
-        <a href="../place_edit/?id={{$place->id}}" class="place_edit_btn">編集</a>
+        <a href="../place_edit?id={{$place->id}}" class="place_edit_btn">編集</a>
       </div>
       <tr class="information_row">
         <td>名称</td>

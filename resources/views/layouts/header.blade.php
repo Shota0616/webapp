@@ -29,7 +29,7 @@
                         @endif
                     @else
                         <li class="nav-item">
-                          <a class="nav-link" href="home/?id={{ Auth::id() }}">
+                          <a class="nav-link" href="home?id={{ Auth::id() }}">
                             {{ __('マイページ') }}
                           </a>
                           <a class="nav-link" href="{{ route('logout') }}">

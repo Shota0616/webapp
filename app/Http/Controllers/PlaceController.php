@@ -65,7 +65,6 @@ class PlaceController extends Controller
 
   public function search(Request $request){
     $query = Place::query();
-    $places = Place::paginate(5);
     $keyword = $request->keyword;
     $prefecture = $request->prefecture;
     $category = $request->category;
@@ -82,7 +81,7 @@ class PlaceController extends Controller
       $query->where('place_cat','=',"{$category}");
     }
 
-    $places = $query->get();
+    $places = $query->paginate(5);
 
     return view('layouts.welcome')->with([
       'places' => $places,
