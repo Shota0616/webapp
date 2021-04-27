@@ -341,7 +341,7 @@ table.information{
   margin-bottom: 30px;
 }
 
-.review_evaluation,.review_title,.review_comment{
+.review_evaluation,.review_title,.review_comment,.review_image{
   font-weight: bold;
   height: 40px;
   line-height: 40px;

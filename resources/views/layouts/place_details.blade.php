@@ -59,7 +59,7 @@
       <a href="" class="review_post_modal">レビューを書く</a>
     </div>
     <div class="review_post">
-      <form action="{{ request()->fullUrl() }}" method="POST">
+      <form action="{{ request()->fullUrl() }}" enctype="multipart/form-data" method="POST">
         @csrf
         <input type="hidden" name="review_place_name" value="{{$place->place_name}}">
         <a href="" class="review_modal_close">閉じる</a>
@@ -86,6 +86,10 @@
         <div class="form_group">
           <label for="review_comment" class="review_comment">{{ __('本文') }}</label>
           <textarea id="review_comment" name="review_comment" rows="8" cols="80" value="{{ old('review_comment') }}"></textarea>
+	</div>
+	<div class="form_group">
+          <label for="photo" class="review_image">画像：</label>
+          <input type="file" class="form-control" name="file">
         </div>
         <input type="hidden" name="places_id" value="{{$place->id}}">
         @endforeach
@@ -123,7 +127,10 @@
         </div>
         <div class="review_item_comment">
           {{$review->review_comment}}
-        </div>
+	</div>
+	<div class="review_item_img">
+	  <img src="{{$review->path}}">
+	</div>
       </a>
       @endforeach
 

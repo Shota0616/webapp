@@ -19,7 +19,8 @@ class CreateReviewsTable extends Migration
             $table->string('review_comment');
             $table->integer('review_evaluation');
             $table->string('review_user_name')->default('ゲスト');
-            $table->string('review_place_name');
+	    $table->string('review_place_name');
+	    $table->string('path');
             $table->integer('places_id')->unsigned();
             $table->integer('users_id')->unsigned();
             $table->foreign('places_id')->references('id')->on('places');
